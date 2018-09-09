@@ -1,11 +1,10 @@
-
-
-body {border: 2px solid powderblue;}
+body {}
 
 
 p {border: 2px solid powderblue;}
 #B {border: 0px;
 	color: red;}
+#A {background-color: blue;}
 
 button {background-color: lightgreen;
 		height: 30px;
