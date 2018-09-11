@@ -11,10 +11,13 @@
 <body>
 	<h1>Ação</h1>
 	<p>Essa é uma página de ação</p>
+	<p id = 'acao'></p>
 	<div>
 		<a href="index.html">
 			<button>Voltar</button>
 		</a>
+		<button type = "button" onclick="document.getElementById('acao').innerHTML = Date()">Ação</button>
+		<button type = "button" onclick="document.getElementById('acao').style.display = 'block'">Retorno</button>
 	</div>
 </body>
 </html>
