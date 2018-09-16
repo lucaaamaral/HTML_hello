@@ -4,6 +4,7 @@
 
 <head>
 	<meta charset="UTF-8" lang="Pt-br"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Ação</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -11,13 +12,19 @@
 <body>
 	<h1>Ação</h1>
 	<p>Essa é uma página de ação</p>
-	<p id = 'acao'> </p>
+	<p id = 'acao'><br></p>
 	<div>
 		<a href="index.html">
 			<button>Voltar</button>
 		</a>
-		<button type = "button" onclick="document.getElementById('acao').innerHTML = Date()">Ação</button>
-		<button type = "button" onclick="document.getElementById('acao').innerHTML = ' '">Retorno</button>
+
+			<button type = "button" onclick="document.getElementById('acao').innerHTML = Date()">Ação</button>
+
+		<a href = "botoes.html">
+			<button id = 'cara' type = "button" onmouseover="fon()" onmouseout="fout()" height="auto">Retorno</button>
+		</a>
 	</div>
+
+	<script type="text/javascript" src = "script.js"></script>
 </body>
 </html>
