@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<meta class="form" id="viewport" content="wclass="form" idth=device-wclass="form" idth, initial-scale=1.0">
+
+	<title>app TREE</title>
+
+	<link rel="stylesheet" href="/style/style.css">
+
+</head>
+
+<body>
+	<h1>app TREE</h1>
+	<br>
+	<h4>Cadastro</h4>
+	<hr>
+	<br>
+
+	<form id="cadastro">
+		<fieldset>
+			<legend>Cadastro</legend>
+			Data de aquisição:<br>	<input type="date" class="" id="" value="01/01/1999"><br>
+			Origem:<br>				<input type="text" class="" id="" value=""><br>
+			Categoria:<br>
+			<select class="" id="" onchange="showGrupo()">
+				<option value="A">Grandes eletrodomésticos				</option>
+				<option value="B">Pequenos eletrodomésticos				</option>
+				<option value="C">Informática e telecomunicações		</option>
+				<option value="D">Consumo e painéis fotovoltáicos		</option>
+				<option value="E">Iluminação							</option>
+				<option value="F">Ferramentas elétrico-eletrônicas		</option>
+				<option value="G">Desporto e lazer						</option>
+				<option value="H">Aparelhos médicos						</option>
+				<option value="I">Monitoração e controle				</option>
+				<option value="J">Distribuidores automáticos			</option>
+			</select>
+			<br>
+			---Grupo a ser mostrado por "showGrupo()" caso id "categoria" tenha valor C<br>Remover hidden de id grupo
+			<br>
+			<div class="" id="grupo" hidden>
+			Grupo:<br>
+			<select class="" id="">
+				<option value="1" >CPU									</option>
+				<option value="2" >Monitor 								</option>
+				<option value="3" >Mouse								</option>
+				<option value="4" >Teclado 								</option>
+				<option value="5" >Impressora 							</option>
+				<option value="6" >Fax									</option>
+				<option value="7" >Telefone 							</option>
+				<option value="8" >Caixa de som 						</option>
+				<option value="9" >Estabilizador e Nobreak				</option>
+				<option value="10">Outros (cabos e peças)				</option>
+			</select>
+			</div>
+			Descrição:<br>			<input type="text" class="" id=""><br>
+			Fabricante:<br>			<input type="text" class="" id=""><br>
+			Tombamento:<br>			<input type="text" class="" id=""><br>
+			Referência/modelo:<br>	<input type="text" class="" id=""><br>
+			No. de série:<br>		<input type="text" class="" id=""><br>
+			Peso:<br>				<input type="text" class="" id=""><br>
+			Estado:<br>				<input type="text" class="" id=""><br>
+			Valor:<br>				<input type="text" class="" id=""><br>
+			Imagem:<br>
+			<input type="button" value="Cadastrar" onclick="">
+		</fieldset>
+		
+	</form>
+
+
+	<a href="../index.html"><button>Voltar</button></a>
+</body>
+</html>
