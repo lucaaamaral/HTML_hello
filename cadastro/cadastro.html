@@ -21,28 +21,28 @@
 	<form id="cadastro">
 		<fieldset>
 			<legend>Cadastro</legend>
-			Data de aquisição:<br>	<input type="date" class="" id="" value="01/01/1999"><br>
-			Origem:<br>				<input type="text" class="" id="" value=""><br>
-			Categoria:<br>
-			<select class="" id="" onchange="showGrupo()">
-				<option value="A">Grandes eletrodomésticos				</option>
-				<option value="B">Pequenos eletrodomésticos				</option>
-				<option value="C">Informática e telecomunicações		</option>
-				<option value="D">Consumo e painéis fotovoltáicos		</option>
-				<option value="E">Iluminação												</option>
-				<option value="F">Ferramentas elétrico-eletrônicas		</option>
-				<option value="G">Desporto e lazer						</option>
-				<option value="H">Aparelhos médicos						</option>
-				<option value="I">Monitoração e controle				</option>
-				<option value="J">Distribuidores automáticos			</option>
+			Data de aquisição:		<br>		<input type="date" class="form" id="" value="01/01/1999"><br>
+			Origem:						<br>		<input type="text" class="form" id="Origem" value=""><br>
+			Categoria:					<br>
+			<select class="form" id="" onchange="showGrupo()">
+				<option value="A">Grandes eletrodomésticos						</option>
+				<option value="B">Pequenos eletrodomésticos						</option>
+				<option value="C">Informática e telecomunicações				</option>
+				<option value="D">Consumo e painéis fotovoltáicos				</option>
+				<option value="E">Iluminação											</option>
+				<option value="F">Ferramentas elétrico-eletrônicas				</option>
+				<option value="G">Desporto e lazer									</option>
+				<option value="H">Aparelhos médicos									</option>
+				<option value="I">Monitoração e controle							</option>
+				<option value="J">Distribuidores automáticos						</option>
 			</select>
 			<br>
 			---Grupo a ser mostrado por "showGrupo()" caso id "categoria" tenha valor C
 			<br>Remover hidden de id grupo
 			<br>
-			<div class="" id="grupo" hidden>
+			<div class="form" id="grupo" hidden>
 			Grupo:<br>
-			<select class="" id="">
+			<select class="form" id="">
 				<option value="1" >CPU									</option>
 				<option value="2" >Monitor 								</option>
 				<option value="3" >Mouse								</option>
@@ -55,15 +55,15 @@
 				<option value="10">Outros (cabos e peças)				</option>
 			</select>
 			</div>
-			Descrição:<br>			<input type="text" class="" id=""><br>
-			Fabricante:<br>			<input type="text" class="" id=""><br>
-			Tombamento:<br>			<input type="text" class="" id=""><br>
-			Referência/modelo:<br>	<input type="text" class="" id=""><br>
-			No. de série:<br>		<input type="text" class="" id=""><br>
-			Peso:<br>				<input type="text" class="" id=""><br>
-			Estado:<br>				<input type="text" class="" id=""><br>
-			Valor:<br>				<input type="text" class="" id=""><br>
-			Imagem:<br>
+			Descrição:					<br>		<input type="text" class="form" id="Descricao"><br>
+			Fabricante:					<br>		<input type="text" class="form" id="Fabricante"><br>
+			Tombamento:					<br>		<input type="text" class="form" id="Tombamento"><br>
+			Referência/modelo:		<br>		<input type="text" class="form" id="Referencia/modelo"><br>
+			No. de série:				<br>		<input type="text" class="form" id="N. de serie"><br>
+			Peso:							<br>		<input type="text" class="form" id="Peso"><br>
+			Estado:						<br>		<input type="text" class="form" id="Estado"><br>
+			Valor:						<br>		<input type="text" class="form" id="Valor"><br>
+			Imagem:						<br>		<br>
 			<input type="button" value="Cadastrar" onclick="">
 		</fieldset>
 
@@ -71,5 +71,7 @@
 
 
 	<a href="../index.html"><button>Voltar</button></a>
+
+<script type="text/javascript" src = "cadastro.js"></script>
 </body>
 </html>
