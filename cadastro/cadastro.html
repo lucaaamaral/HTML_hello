@@ -14,17 +14,18 @@
 <body>
 	<h1>app TREE</h1>
 	<br>
-	<h4>Cadastro</h4>
+	<h4 id="ver">Cadastro</h4>
 	<hr>
 	<br>
+	<p>Preencher com "-" (hífen) caso não possua a informação ou  não seja aplicável</p>
 
 	<form id="cadastro">
 		<fieldset>
 			<legend>Cadastro</legend>
-			Data de aquisição:		<br>		<input type="date" class="form" id="" value="01/01/1999"><br>
+			Data de aquisição:		<br>		<input type="date" class="form" id="dataAq" value="01/01/1999"><br>
 			Origem:						<br>		<input type="text" class="form" id="Origem" value=""><br>
 			Categoria:					<br>
-			<select class="form" id="" onchange="showGrupo()">
+			<select class="form" id="categoria" onchange="showGrupo()">
 				<option value="A">Grandes eletrodomésticos						</option>
 				<option value="B">Pequenos eletrodomésticos						</option>
 				<option value="C">Informática e telecomunicações				</option>
@@ -64,7 +65,7 @@
 			Estado:						<br>		<input type="text" class="form" id="Estado"><br>
 			Valor:						<br>		<input type="text" class="form" id="Valor"><br>
 			Imagem:						<br>		<br>
-			<input type="button" value="Cadastrar" onclick="">
+			<input type="button" value="Cadastrar" onclick="local_save()">
 		</fieldset>
 
 	</form>

@@ -29,18 +29,67 @@ function focusout(obj)
 	}
 }
 
-function submit_db()
+
+function show_grupo()
 {
-	for (i=0; i<k-1; i++)
+	if (document.getElementById("categoria").value == "C")
 	{
-		if(formulario[i].type == "text" && formulario[i].id == formulario[i].value)
-		{
-			formulario[i].value = null;
-		}
+		document.getElementById("ver").innerHTML = "C"
+		document.getElementById("grupo").hidden = false
+	}
+	else
+	{
+		document.getElementById("grupo").hidden = true
+	}
+	
+}
+
+
+function local_save()
+{
+	
+	if(localStorage.requisition)
+	{
+		//document.getElementById("ver").innerHTML = Number(localStorage.requisition)
+		localStorage.requisition = Number(localStorage.requisition)+1
+	}
+	else
+		localStorage.requisition = 1
+
+	if (	document.getElementById("Origem").value 		== "Origem" 		&&
+			document.getElementById("Descricao").value 	== "Descricao" 	&&
+			document.getElementById("Fabricante").value 	== "Fabricante" 	&&
+			document.getElementById("Tombamento").value 	== "Tombamento" 	&&
+			document.getElementById("Referencia").value 	== "Referencia" 	&&
+			document.getElementById("N. de serie").value == "N. de serie"	&&
+			document.getElementById("Peso").value 			== "Peso" 			&&
+			document.getElementById("Estado").value 		== "Estado" 		&&
+			document.getElementById("Valor").value 		== "Valor"				)
+	{
+		verificar_dados()
+	}
+	else
+	{
+		localstorage.dataAq 			= document.getElementById("dataAq").value
+		localstorage.origem 			= document.getElementById("Origem").value
+		localstorage.categoria 		= document.getElementById("categoria").value
+		localstorage.grupo 			= (document.getElementById("categoria").value)?document.getElementById("grupo").value:"Não aplicável"
+		localstorage.descricao 		= document.getElementById("Descricao").value
+		localstorage.fabricante 	= document.getElementById("Fabricante").value
+		localstorage.tombamento 	= document.getElementById("Tombamento").value
+		localstorage.referencia 	= document.getElementById("Referencia").value
+		localstorage.serialN 		= document.getElementById("N. de serie").value
+		localstorage.peso 			= document.getElementById("Peso").value
+		localstorage.estado 			= document.getElementById("Estado").value
+		localstorage.valor 			= document.getElementById("Valor").value
+		localstorage.imagem 			= document.getElementById("imagem").value
 	}
 
-	document.getElementById("formulario").reset();
+}
+
+
+
+
 //enviar ao banco de dados
 
-}
 
