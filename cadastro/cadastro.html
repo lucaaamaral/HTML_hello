@@ -24,8 +24,9 @@
 			<legend>Cadastro</legend>
 			Data de aquisição:		<br>		<input type="date" class="form" id="dataAq" value="01/01/1999"><br>
 			Origem:						<br>		<input type="text" class="form" id="Origem" value=""><br>
+			<p>colocar campo de busca em origem</p>
 			Categoria:					<br>
-			<select class="form" id="categoria" onchange="showGrupo()">
+			<select class="form" id="categoria" onchange="show_grupo()">
 				<option value="A">Grandes eletrodomésticos						</option>
 				<option value="B">Pequenos eletrodomésticos						</option>
 				<option value="C">Informática e telecomunicações				</option>
@@ -37,9 +38,6 @@
 				<option value="I">Monitoração e controle							</option>
 				<option value="J">Distribuidores automáticos						</option>
 			</select>
-			<br>
-			---Grupo a ser mostrado por "showGrupo()" caso id "categoria" tenha valor C
-			<br>Remover hidden de id grupo
 			<br>
 			<div class="form" id="grupo" hidden>
 			Grupo:<br>
@@ -59,7 +57,7 @@
 			Descrição:					<br>		<input type="text" class="form" id="Descricao"><br>
 			Fabricante:					<br>		<input type="text" class="form" id="Fabricante"><br>
 			Tombamento:					<br>		<input type="text" class="form" id="Tombamento"><br>
-			Referência/modelo:		<br>		<input type="text" class="form" id="Referencia/modelo"><br>
+			Referência/modelo:		<br>		<input type="text" class="form" id="Referencia modelo"><br>
 			No. de série:				<br>		<input type="text" class="form" id="N. de serie"><br>
 			Peso:							<br>		<input type="text" class="form" id="Peso"><br>
 			Estado:						<br>		<input type="text" class="form" id="Estado"><br>
