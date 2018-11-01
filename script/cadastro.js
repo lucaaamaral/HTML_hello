@@ -85,16 +85,17 @@ function atribuir_dados()
         
     req = localStorage.requisition
 
+    
     localStorage.setItem(req+"_dataAq" 			, document.getElementById("dataAq").value)
     localStorage.setItem(req+"_origem"			, document.getElementById("Origem").value)
     localStorage.setItem(req+"_categoria" 	   	, document.getElementById("categoria").value)
-    localStorage.setItem(req+"_grupo" 		    , (document.getElementById("categoria").value)?document.getElementById("grupo").value:"Não aplicável")
+    localStorage.setItem(req+"_grupo" 		    , (document.getElementById("categoria").value)=="C"?document.getElementById("grup").value:"Não aplicável")
     localStorage.setItem(req+"_descricao" 	    , document.getElementById("Descricao").value)
     localStorage.setItem(req+"_fabricante" 	    , document.getElementById("Fabricante").value)
     localStorage.setItem(req+"_tombamento" 	    , document.getElementById("Tombamento").value)
     localStorage.setItem(req+"_referencia" 	    , document.getElementById("Referencia modelo").value)
-    localStorage.setItem(req+"_serialN" 	   	, document.getElementById("N. de serie").value)
-    localStorage.setItem(req+"_peso" 	    	, document.getElementById("Peso").value)
+    localStorage.setItem(req+"_serialN" 	     	, document.getElementById("N. de serie").value)
+    localStorage.setItem(req+"_peso" 	        , document.getElementById("Peso").value)
     localStorage.setItem(req+"_estado" 			, document.getElementById("Estado").value)
     localStorage.setItem(req+"_valor" 	    	, document.getElementById("Valor").value)
     //localstorage.imagem 			= document.getElementById("imagem").value

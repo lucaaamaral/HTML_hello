@@ -7,23 +7,42 @@
 
 	<title>app TREE</title>
 
-	<link rel="stylesheet" href="/style/style.css">
+	<link rel="stylesheet" href="style/style.css">
 
 </head>
 
-<body>
+<body load="update()">
 	<h1>app TREE</h1>
 	<br>
-	<h4>Pendencias</h4>	
+	<h4 id="ver">Pendencias</h4>	
 	<br>
 	<hr>
 	<br><br>
+	
 
 	<div id="pend">
-
+        <table id="tab" border="1" cellspacing="3" cellpadding="3" >		
+            <tr>
+                <th>Data de aquisição</th>
+                <th>Origem </th>
+                <th>Categoria</th>	
+                <th>Grupo</th>
+                <th>Descrição</th>
+                <th>Fabricante</th>
+                <th>Tombamento</th>			
+                <th>Referência/modelo</th>
+                <th>No. de série</th>		
+                <th>Peso</th>				
+                <th>Estado</th>			
+                <th>Valor</th>			
+                <th>Imagem</th>
+            </tr>			
+        </table>
 	<div>
-	<button onclick="enviar()">Enviar</button>
+	<br><br><br>
+	<button onclick="">Enviar</button>
 	<a href="index.html"><button>Voltar</button></a>
 
+	<script type="text/javascript" src = "script/pendencias.js"></script>
 </body>
 </html>
