@@ -22,6 +22,7 @@ function focused(obj)
 	if (obj.value == obj.id)
 	{
 		obj.value = '';
+        obj.style.color = "black"
 	}
 }
 
@@ -49,49 +50,75 @@ function show_grupo()
 	
 }
 
+function verificar_dados()
+{
+    var formulario = document.getElementsByClassName("form");
+    var i, k = formulario.length;
+    var check
+    check = false
+    for (i=0; i<k; i++)
+    {
+        
+        if (formulario[i].value == formulario[i].id)
+        {
+            formulario[i].style.color = "red"
+            check = true
+        }
+        else
+        {
+            formulario[i].style.color = "black"
+        }
+    }
+    return check
+}
+
+function atribuir_dados()
+{
+    var req=0
+    document.getElementById("ver").innerHTML = "atribuir"
+     //Informar que existem solicitacoes por enviar ao BD    
+    if(localStorage.requisition)
+    {
+        localStorage.requisition = Number(localStorage.requisition) + 1
+    }
+    else localStorage.requisition = 1
+        
+    req = localStorage.requisition
+
+    localStorage.setItem("dataAq_"+req 			, document.getElementById("dataAq").value)
+    localStorage.setItem("origem_"+req			, document.getElementById("Origem").value)
+    localStorage.setItem("categoria_"+req 	   	, document.getElementById("categoria").value)
+    localStorage.setItem("grupo_"+req 		    , (document.getElementById("categoria").value)?document.getElementById("grupo").value:"Não aplicável")
+    localStorage.setItem("descricao_"+req 	    , document.getElementById("Descricao").value)
+    localStorage.setItem("fabricante_"+req 	    , document.getElementById("Fabricante").value)
+    localStorage.setItem("tombamento_"+req 	    , document.getElementById("Tombamento").value)
+    localStorage.setItem("referencia_"+req 	    , document.getElementById("Referencia modelo").value)
+    localStorage.setItem("serialN_"+req 	   	, document.getElementById("N. de serie").value)
+    localStorage.setItem("peso_"+req 	    	, document.getElementById("Peso").value)
+    localStorage.setItem("estado_"+req 			, document.getElementById("Estado").value)
+    localStorage.setItem("valor_"+req 	    	, document.getElementById("Valor").value)
+    //localstorage.imagem 			= document.getElementById("imagem").value
+        
+    window.location.href = "../pendencias/pendencias.html"
+}
+
+
 
 function local_save()
 {
-	if(localStorage.requisition)
+    //var check = verificar_dados()
+    
+	if (verificar_dados())
 	{
-		localStorage.requisition = Number(localStorage.requisition)+1
-	}
-	
-	if (	document.getElementById("Referencia modelo").value	== "Referencia modelo")
-		localStorage.requisition = 1
-		
-	
-
-	if (  document.getElementById("Origem").value 		== "Origem" 						&& 
-			document.getElementById("Descricao").value	== "Descricao" 					&&
-			document.getElementById("Fabricante").value	== "Fabricante" 					&& 
-			document.getElementById("Tombamento").value	== "Tombamento" 					&& 
-			document.getElementById("Referencia modelo").value	== "Referencia modelo" 	&& 
-			document.getElementById("N. de serie").value == "N. de serie" 					&& 
-			document.getElementById("Peso").value 			== "Peso" 							&& 
-			document.getElementById("Estado").value 		== "Estado" 						&& 
-			document.getElementById("Valor").value 		== "Valor")
-	{
-		verificar_dados()
+		//verificar_dados()
+        //document.getElementById("ver").innerHTML = "true"
 	}
 	else
-	{
-		localStorage.dataAq 			= document.getElementById("dataAq").value
-		localStorage.origem 			= document.getElementById("Origem").value
-		localStorage.categoria 		= document.getElementById("categoria").value
-		localStorage.grupo 			= (document.getElementById("categoria").value)?document.getElementById("grupo").value:"Não aplicável"
-		localStorage.descricao 		= document.getElementById("Descricao").value
-		localStorage.fabricante 	= document.getElementById("Fabricante").value
-		localStorage.tombamento 	= document.getElementById("Tombamento").value
-		localStorage.referencia 	= document.getElementById("Referencia modelo").value
-		localStorage.serialN 		= document.getElementById("N. de serie").value
-		localStorage.peso 			= document.getElementById("Peso").value
-		localStorage.estado 			= document.getElementById("Estado").value
-		localStorage.valor 			= document.getElementById("Valor").value
-		//localstorage.imagem 			= document.getElementById("imagem").value
-	}
-	
-
+    {
+        //document.getElementById("ver").innerHTML = "atribuir----"
+        atribuir_dados()
+        document.getElementById("ver").innerHTML = "atribuido"
+    }
 }
 
 
