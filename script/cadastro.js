@@ -85,21 +85,21 @@ function atribuir_dados()
         
     req = localStorage.requisition
 
-    localStorage.setItem("dataAq_"+req 			, document.getElementById("dataAq").value)
-    localStorage.setItem("origem_"+req			, document.getElementById("Origem").value)
-    localStorage.setItem("categoria_"+req 	   	, document.getElementById("categoria").value)
-    localStorage.setItem("grupo_"+req 		    , (document.getElementById("categoria").value)?document.getElementById("grupo").value:"Não aplicável")
-    localStorage.setItem("descricao_"+req 	    , document.getElementById("Descricao").value)
-    localStorage.setItem("fabricante_"+req 	    , document.getElementById("Fabricante").value)
-    localStorage.setItem("tombamento_"+req 	    , document.getElementById("Tombamento").value)
-    localStorage.setItem("referencia_"+req 	    , document.getElementById("Referencia modelo").value)
-    localStorage.setItem("serialN_"+req 	   	, document.getElementById("N. de serie").value)
-    localStorage.setItem("peso_"+req 	    	, document.getElementById("Peso").value)
-    localStorage.setItem("estado_"+req 			, document.getElementById("Estado").value)
-    localStorage.setItem("valor_"+req 	    	, document.getElementById("Valor").value)
+    localStorage.setItem(req+"_dataAq" 			, document.getElementById("dataAq").value)
+    localStorage.setItem(req+"_origem"			, document.getElementById("Origem").value)
+    localStorage.setItem(req+"_categoria" 	   	, document.getElementById("categoria").value)
+    localStorage.setItem(req+"_grupo" 		    , (document.getElementById("categoria").value)?document.getElementById("grupo").value:"Não aplicável")
+    localStorage.setItem(req+"_descricao" 	    , document.getElementById("Descricao").value)
+    localStorage.setItem(req+"_fabricante" 	    , document.getElementById("Fabricante").value)
+    localStorage.setItem(req+"_tombamento" 	    , document.getElementById("Tombamento").value)
+    localStorage.setItem(req+"_referencia" 	    , document.getElementById("Referencia modelo").value)
+    localStorage.setItem(req+"_serialN" 	   	, document.getElementById("N. de serie").value)
+    localStorage.setItem(req+"_peso" 	    	, document.getElementById("Peso").value)
+    localStorage.setItem(req+"_estado" 			, document.getElementById("Estado").value)
+    localStorage.setItem(req+"_valor" 	    	, document.getElementById("Valor").value)
     //localstorage.imagem 			= document.getElementById("imagem").value
         
-    window.location.href = "../pendencias/pendencias.html"
+    window.location.href = "pendencias.html"
 }
 
 
