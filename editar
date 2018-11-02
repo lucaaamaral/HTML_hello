@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<meta class="form" id="viewport" content="wclass="form" idth=device-wclass="form" idth, initial-scale=1.0">
+
+	<title>app TREE</title>
+
+</head>
+
+<body>
+	<h1>Editar informações</h1>
+	<p id = "ver" hidden> </p>
+	<p>Insira o código do equipamento, selecione o campo que deseja editar e especifique:</p>
+	
+	<form id="editar">
+	Código:<input type="text" class="form" id="codigo" value="Código"><br><br> <!-- Criar botão de busca para localizar o código do equipamento-->
+	
+	
+	<select class="form" id="editar_val" onchange="show_estado()">
+				<option value="A">Descrição				</option>
+				<option value="B">Valor					</option>
+				<option value="C">Origem				</option>
+				<option value="D">N. de patrimônio		</option>
+				<option value="E">Estado				</option>
+	</select>	
+	<br>
+	<br>
+		<textarea id = "descricao_ed" rows="3" cols="25" >Insira as novas alterações sobre a descrição do equipamento</textarea>
+		<textarea id = "valor_ed" rows="3" cols="25" hidden>Insira as novas alterações sobre o valor do equipamento</textarea>
+		<textarea id = "origem_ed" rows="3" cols="25" hidden>Insira as novas alterações sobre a origem do equipamento</textarea>
+		<textarea id = "patrimonio_ed" rows="3" cols="25" hidden>Insira as novas alterações sobre o patrimônio do equipamento</textarea>
+
+	<div class="form" id="estado_ed" hidden>
+				<input type="radio" name="Estado" value="Novo" checked>Novo<br>
+				<input type="radio" name="Estado" value="Danificado">Danificado<br>
+				<input type="radio" name="Estado" value="Em reparo">Em reparo<br>
+				<input type="radio" name="Estado" value="Reparado">Reparado<br>
+				<input type="radio" name="Estado" value="Sucata">Sucata<br>
+	</div>
+	<br>
+	<input type="submit" class="form" id="Enviar" value="Enviar">
+	</form>
+	<br>
+	<br>
+
+	<a href="../index.html"><button>Voltar</button></a>
+
+	<script type = "text/javascript" src = "script/editar.js"> </script>
+</body>
+
+</html>
