@@ -1,6 +1,4 @@
  <?php
- 
-
 $server = "localhost";
 $user = "tree";
 $passwd = "treeUFPB";
@@ -12,46 +10,13 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 //pesquisar por cpf cadastrado antes de cadastrar novo
-	$cpf		= $_POST["cpf"];
-	
-	
-	
-		{
-			//para testes apenas
-			//$cpf = 3;
-			//$sql = $conn->prepare("SELECT COUNT (cpf) from usuario where cpf='$cpf')");
-		
-			$sql = 'SELECT id_user FROM usuario WHERE id_user=3';
-		
-			try 
-			{
-				$stmt = $conn->query($sql);
-				$result = $stmt->fetch(PDO::FETCH_NUM);
-				$cpf_em_uso = $result[0];
-			}
-			catch(PDOException $e)
-			{
-				print $e->getMessage();
-			}
-		}
-		
-	if($cpf_em_uso)
-	{
-		echo	'EM USO!';
-		$conn = null;
-		exit;
-	}
+//pegar ultimo numero id salvo
+
+	$id = 0;
 
 
-	$log 		= $_POST["nome"];
-	$sen		= $_POST["senha"];
-	$email	= $_POST["email"];
-		
-	
-	
-	//Atualizar BD no computador e modificar a linha seguinte para cadastrar usuarios
-    $sql = "INSERT INTO usuario (nome_user, senha_user) VALUES ('$log','$sen')";
-	
+    $sql = "INSERT INTO MyGuests (id, nome, senha, email, cpf)
+    VALUES ($id, $_POST["nome"], $_POST["senha"], $_POST["email"], $_POST["cpf"])";
 
     // use exec() because no results are returned
     $conn->exec($sql);
@@ -63,6 +28,4 @@ catch(PDOException $e)
     }
 
 $conn = null;
-
-
 ?> 
