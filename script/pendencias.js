@@ -12,11 +12,11 @@ function update()
     {
         var col = tab.insertRow(i)
         
-        document.getElementById("ver").innerHTML = "coluna"
+        //document.getElementById("ver").innerHTML = "coluna"
         
         var cell0 = col.insertCell(0)
                 
-        document.getElementById("ver").innerHTML = window.localStorage.getItem(1+"_fabricante")
+        //document.getElementById("ver").innerHTML = window.localStorage.getItem(1+"_fabricante")
         
         var cell1 = col.insertCell(1); //origem
         var cell2 = col.insertCell(2); //cetegoria
