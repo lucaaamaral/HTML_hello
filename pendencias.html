@@ -11,7 +11,7 @@
 
 </head>
 
-<body load="update()">
+<body onload="update()">
 	<h1>app TREE</h1>
 	<br>
 	<h4 id="ver">Pendencias</h4>	
@@ -19,9 +19,9 @@
 	<hr>
 	<br><br>
 	
-
+	<p id="numero" hidden>0</p>
 	<div id="pend">
-        <table id="tab" border="1" cellspacing="3" cellpadding="3" >		
+        <table id="tab" border="1" cellspacing="3" cellpadding="3">		
             <tr>
                 <th>Data de aquisição</th>
                 <th>Origem </th>
@@ -36,12 +36,17 @@
                 <th>Estado</th>			
                 <th>Valor</th>			
                 <th>Imagem</th>
+                <th>Qualquer outro</th>
             </tr>			
         </table>
 	<div>
 	<br><br><br>
-	<button onclick="">Enviar</button>
+	<button onclick="enviar_bd()">Enviar</button>
 	<a href="index.html"><button>Voltar</button></a>
+	
+	<p>Deverao ser feitas algumas modificacoes para enviar as informacoes por POST
+	<br>
+	formato: "numero"_"valor0a12"</p>
 
 	<script type="text/javascript" src = "script/pendencias.js"></script>
 </body>

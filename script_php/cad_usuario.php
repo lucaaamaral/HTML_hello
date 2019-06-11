@@ -1,5 +1,6 @@
  <?php
- 
+
+//AJUSTAR QUANDO BANCO ESTIVER PRONTO
 
 $server = "localhost";
 $user = "tree";
@@ -8,14 +9,14 @@ $dbname = "tree";
 
 try {
     $conn = new PDO("mysql:host=$server;dbname=$dbname", $user, $passwd);
-    // set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
+    
 //pesquisar por cpf cadastrado antes de cadastrar novo
 	$cpf		= $_POST["cpf"];
 		{
-			//para testes apenas
-			$sql = 'SELECT id_user FROM usuario WHERE id_user=3';
+			//para testes apenas ---- modificar parametro id_user por cpf quando banco estiver configurado
+			//AJUSTE AQUI!!!
+			$sql = 'SELECT id_user FROM usuario WHERE id_user=0';
 			try 
 			{
 				$stmt = $conn->query($sql);
@@ -34,12 +35,13 @@ try {
 		exit;
 	}
 
-
+	
 	$log 		= $_POST["nome"];
 	$sen		= $_POST["senha"];
 	$email	= $_POST["email"];
 		
 	//Atualizar BD no computador e modificar a linha seguinte para cadastrar usuarios
+	//AJUSTE AQUI!!!
     $sql = "INSERT INTO usuario (nome_user, senha_user) VALUES ('$log','$sen')";
 	
 
