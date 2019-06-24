@@ -32,16 +32,17 @@ CREATE TABLE cadastro_eletro ( -- cadastro dos eletrônicos
 		ON DELETE CASCADE -- SE A LINHA DE USUARIO DA TABELA PAI FOR APAGADA, OS DADOS DO ELETRONICO VÃO SER APAGADOS TBM.
 		ON UPDATE CASCADE -- ATUALIZA OS DADOS DO FILHO CASO O PAI SEJA ALTERADO
 	);
-	
 	CREATE TABLE cadastro_dependente  ( -- cadastro dos componentes derivados de eletrônicos
-	codigo_eletro char (50) NOT NULL,
 	codigo_dep char (50) NOT NULL,
-	
-	
+	codigo_eletro char (50) NOT NULL DEFAULT 1,
+	PRIMARY KEY (codigo_dep),
+	FOREIGN KEY (cod_eletro) REFERENCES usuario(cod_eletro)
+		ON DELETE SET DEFAULT -- SE A LINHA DO ELETRO DA TABELA PAI FOR APAGADA, OS DADOS DO ELETRONICO DEPENDENTE VÃO SER APAGADOS TBM.
+		ON UPDATE CASCADE -- ATUALIZA OS DADOS DO FILHO CASO O PAI SEJA ALTERADO
 	);
 	
 -- if (seletor==0)
-CREATE TABLE venda_eletro (  -- transação de venda
+	CREATE TABLE venda_eletro (  -- transação de venda
 	id_saida int NOT NULL AUTO_INCREMENT,
 	id_user int NOT NULL,
 	codigo_eletro char (50) NOT NULL,
