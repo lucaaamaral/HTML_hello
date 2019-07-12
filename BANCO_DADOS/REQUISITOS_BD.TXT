@@ -1,0 +1,43 @@
+usuario:
+	id [PRIMARY]
+	nome
+	senha
+	email[UNIQUE]
+	cpf[UNIQUE]
+	
+Eletronico:
+	id [PRIMARY]
+	id_user [FOREIGN]
+	op -- 0 venda 1 emprestimo
+	categoria -- opcao outros caso necessario
+	cat_extra -- categoria nao listada
+	grupo
+	fabricante
+	preço 
+	valor
+	peso
+	tombamento
+	estado
+	serial_n
+	referencia_modelo
+	origem 
+	data_aq	-- data de compra
+	data_en	-- data de cadastro
+	data_op -- data da ultima operação
+	obs
+	
+Venda:
+
+
+
+
+Provedor:
+
+
+
+Receptor:
+	
+	
+	
+	
+	
