@@ -19,35 +19,65 @@
 	<hr>
 	<br><br>
 	
-	<p id="numero" hidden>0</p>
-	<div id="pend">
-        <table id="tab" border="1" cellspacing="3" cellpadding="3">		
-            <tr>
-                <th>Data de aquisição</th>
-                <th>Origem </th>
-                <th>Categoria</th>	
-                <th>Grupo</th>
-                <th>Descrição</th>
-                <th>Fabricante</th>
-                <th>Tombamento</th>			
-                <th>Referência/modelo</th>
-                <th>No. de série</th>		
-                <th>Peso</th>				
-                <th>Estado</th>			
-                <th>Valor</th>			
-                <th>Imagem</th>
-                <th>Qualquer outro</th>
-            </tr>			
-        </table>
-	<div>
-	<br><br><br>
+	<form id="pendencia" action="script_php/cad_pendencia.php" method="post">
+		<p id="numero" name='numero' hidden>0</p>
+	     <table id="tab" border="1" cellspacing="3" cellpadding="3">		
+	         <tr>
+	         	<th>Seletor</th>
+	            <th>Descrição</th>
+	            <th>Categoria</th>
+	            <th>Grupo</th>
+	            <th>Fabricante</th>	
+	            <th>Preço</th>			
+	            <th>Valor</th>		
+	            <th>Peso</th>	
+	            <th>Tombamento</th>			
+	            <th>Estado</th>	
+	            <th>No. de série</th>
+	            <th>Referência / modelo</th>
+	            <th>Origem </th>		
+	            <th>Data de aquisição</th>
+	            <th>Qualquer outro</th>						
+	            <th>Imagem</th>
+	         </tr>			
+	     </table>
+	<input type="submit" value="Cadastrar">
+	</form>
+	
+	
+	<a href="index.html"><button>Voltar in</button></a>
 	<button onclick="enviar_bd()">Enviar</button>
-	<a href="index.html"><button>Voltar</button></a>
 	
 	<p>Deverao ser feitas algumas modificacoes para enviar as informacoes por POST
 	<br>
-	formato: "numero"_"valor0a12"</p>
+	formato: "numero"_"valor0a12", "numero" começa em 1</p>
 
 	<script type="text/javascript" src = "script/pendencias.js"></script>
+	
+<!--B>	 comentario	
+/*
+
+cadastro_eletro:
+	codigo_eletro 	[interno = gerar]
+	id_user int 	[interno = atribuir]
+	seletor bit 	[EXPLICITO]
+	descricao 		[EXPLICITO]
+	categoria 		[EXPLICITO]
+	grupo 			[EXPLICITO]
+	fabricante 		[EXPLICITO]
+	preço 			[EXPLICITO]
+	valor 			[EXPLICITO]
+	peso 				[EXPLICITO]
+	tombamento 		[EXPLICITO]
+	estado_eletro 	[EXPLICITO]
+	serie 			[EXPLICITO]
+	ref_modelo 		[EXPLICITO]
+	origem 			[EXPLICITO]
+	data_entrada 	[interno]
+	data_aquiscao 	[EXPLICITO]
+	obs 				[EXPLICITO]
+*/		
+		
+</B-->	
 </body>
 </html>

@@ -56,10 +56,7 @@ function show_grupo()
 	
 }
 
-
-//ARMAZENAMENTO A PARTIR DAQUI!!!
-
-
+//atribuir funçoes a eventos
 var formulario = document.getElementsByClassName("form");
 
 var i, k = formulario.length;
@@ -67,17 +64,11 @@ for (i=0; i<k; i++)
 {
 	if(formulario[i].type == "text")
 	{
-		//if (sessionstorage.origem)
-		{
-			//document.getElementById("Origem").innerHTML = sessionstorage.origem
-		}
 		formulario[i].onfocus = function onfocus(event) {focused(this)}
 		formulario[i].onblur = function onblur(event) {focusout(this)}
 		formulario[i].value = formulario[i].id
-		//formu[i].value = formu[i].onfocus;
 	}
 	//else
-	
 	//AJUSTAR AQUI!!!
 	//Inserir outros parametros e ampliar os tipos de parametros e determinar valores padrão para parametros não utilizados
 }
@@ -85,8 +76,7 @@ for (i=0; i<k; i++)
 //salvar informacoes no localStorage
 function atribuir_dados()
 {
-    var req=0
-     //Informar que existem solicitacoes por enviar ao BD    
+    var req=0	//Informar que existem solicitacoes por enviar ao BD    
     if(localStorage.requisition)
     {
         localStorage.requisition = Number(localStorage.requisition) + 1
@@ -95,19 +85,21 @@ function atribuir_dados()
         
     req = localStorage.requisition
 
-    
-    localStorage.setItem(req+"_dataAq" 		, document.getElementById("dataAq").value)
-    localStorage.setItem(req+"_origem"			, document.getElementById("Origem").value)
+    localStorage.setItem(req+"_selet" 			, document.getElementById("selet").value)	//sem gravar
+    localStorage.setItem(req+"_descricao"		, document.getElementById("Descricao").value)
     localStorage.setItem(req+"_categoria"  	, document.getElementById("categoria").value)
     localStorage.setItem(req+"_grupo" 		   , (document.getElementById("categoria").value)=="C"?document.getElementById("grup").value:"-")
-    localStorage.setItem(req+"_descricao"		, document.getElementById("Descricao").value)
     localStorage.setItem(req+"_fabricante" 	, document.getElementById("Fabricante").value)
-    localStorage.setItem(req+"_tombamento" 	, document.getElementById("Tombamento").value)
-    localStorage.setItem(req+"_referencia" 	, document.getElementById("Referencia modelo").value)
-    localStorage.setItem(req+"_serialN" 	   , document.getElementById("N. de serie").value)
-    localStorage.setItem(req+"_peso" 	      , document.getElementById("Peso").value)
-    localStorage.setItem(req+"_estado" 		, document.getElementById("Estado").value)
+    localStorage.setItem(req+"_preco" 			, document.getElementById("Preco").value)	//sem gravar
     localStorage.setItem(req+"_valor" 	    	, document.getElementById("Valor").value)
+    localStorage.setItem(req+"_peso" 	      , document.getElementById("Peso").value)
+    localStorage.setItem(req+"_tombamento" 	, document.getElementById("Tombamento").value)
+    localStorage.setItem(req+"_estado" 		, document.getElementById("Estado").value)
+    localStorage.setItem(req+"_serialN" 	   , document.getElementById("N. de serie").value)
+    localStorage.setItem(req+"_referencia" 	, document.getElementById("Referencia modelo").value)
+    localStorage.setItem(req+"_origem"			, document.getElementById("Origem").value)
+    localStorage.setItem(req+"_dataAq" 		, document.getElementById("dataAq").value)
+    localStorage.setItem(req+"_obs"				, document.getElementById("Obs").value)
     //localstorage.imagem 			= document.getElementById("imagem").value
         
     window.location.href = "pendencias.html"

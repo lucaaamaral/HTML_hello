@@ -20,12 +20,14 @@
 	<p>Preencher com "-" (hífen) caso não possua a informação ou  não seja aplicável</p>
 
 	<form id="cadastro">
-		<fieldset>
-			<legend>Cadastro</legend>
-			Data de aquisição:		<br>		<input type="date" class="form" id="dataAq" value="01/01/1999"><br>
-			Origem:						<br>		<input type="text" class="form" id="Origem" value=""><br>
-			<p>colocar campo de busca em origem</p>
-			Categoria:					<br>
+		<table border=0>
+			<tr><td>Seletor[?]:	<td>	
+			<select class="form" id="selet">
+					<option value=0>Empréstimo		</option>
+					<option value=1>Venda 			</option>
+				</select></tr>
+			<tr><td>Descrição:	<td> <input type="text" class="form" id="Descricao"></td>
+			<tr><td>Categoria:	<td>					
 			<select class="form" id="categoria" onchange="show_grupo()">
 				<option value="A">Grandes eletrodomésticos						</option>
 				<option value="B">Pequenos eletrodomésticos						</option>
@@ -37,41 +39,41 @@
 				<option value="H">Aparelhos médicos									</option>
 				<option value="I">Monitoração e controle							</option>
 				<option value="J">Distribuidores automáticos						</option>
-			</select>
-			<br>
-			<div class="form" id="grupo" hidden>
-			Grupo:<br>
+			</select></td>
+			<tr id="grupo" hidden><td>Grupo:<td>
 			<select class="form" id="grup">
-				<option value="1" >CPU									</option>
+				<option value="1" >CPU										</option>
 				<option value="2" >Monitor 								</option>
-				<option value="3" >Mouse								</option>
+				<option value="3" >Mouse									</option>
 				<option value="4" >Teclado 								</option>
 				<option value="5" >Impressora 							</option>
-				<option value="6" >Fax									</option>
-				<option value="7" >Telefone 							</option>
-				<option value="8" >Caixa de som 						</option>
-				<option value="9" >Estabilizador e Nobreak				</option>
+				<option value="6" >Fax										</option>
+				<option value="7" >Telefone 								</option>
+				<option value="8" >Caixa de som 							</option>
+				<option value="9" >Estabilizador e Nobreak			</option>
 				<option value="10">Outros (cabos e peças)				</option>
-			</select>
-			</div>
-			Descrição:					<br>		<input type="text" class="form" id="Descricao"><br>
-			Fabricante:					<br>		<input type="text" class="form" id="Fabricante"><br>
-			Tombamento:					<br>		<input type="text" class="form" id="Tombamento"><br>
-			Referência/modelo:		<br>		<input type="text" class="form" id="Referencia modelo"><br>
-			No. de série:				<br>		<input type="text" class="form" id="N. de serie"><br>
-			Peso:							<br>		<input type="text" class="form" id="Peso"><br>
-			Estado:						<br>		<input type="text" class="form" id="Estado"><br>
-			Valor:						<br>		<input type="text" class="form" id="Valor"><br>
-			Imagem:						<br>		<br>
-			<input type="button" value="Cadastrar" onclick="local_save()">
-		</fieldset>
+			</select></tr>
+			<tr><td>Fabricante:			<td>	<input type="text" class="form" id="Fabricante">					</tr>
+			<tr><td>Preço					<td>	<input type="text" class="form" id="Preco">							</tr>
+			<tr><td>Valor:					<td>	<input type="text" class="form" id="Valor">							</tr>
+			<tr><td>Peso:					<td>	<input type="text" class="form" id="Peso">							</tr>
+			<tr><td>Tombamento:			<td>	<input type="text" class="form" id="Tombamento">					</tr>
+			<tr><td>Estado:				<td>	<input type="text" class="form" id="Estado">							</tr>
+			<tr><td>No. de série:		<td>	<input type="text" class="form" id="N. de serie">					</tr>
+			<tr><td>Referência/modelo:	<td>	<input type="text" class="form" id="Referencia modelo">			</tr>
+			<tr><td>Origem:				<td>	<input type="text" class="form" id="Origem" value="">				</tr>
+			<tr><td>Data de aquisição:	<td>	<input type="date" class="form" id="dataAq" value="1999-01-01"></tr>
+			<tr><td>Observação:			<td>	<input type="text" class="form" id="Obs"></tr>
+			<tr><td>Imagem:				<td>				</tr>
+		</table>
+		<input type="button" value="Cadastrar" onclick="local_save()">
 
 	</form>
-
-
+	
 	<a href="index.html"><button>Voltar</button></a>
 	<a href="pendencias.html"><button>Pendencias</button></a>
 
 <script type="text/javascript" src = "script/cadastro.js"></script>
 </body>
 </html>
+	

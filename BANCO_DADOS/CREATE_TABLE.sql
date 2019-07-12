@@ -1,11 +1,14 @@
 CREATE TABLE usuario (  -- cadastro de todos os usuarios
 	id_user int NOT NULL AUTO_INCREMENT,
 	nome_user char (100) NOT NULL,
-	senha_user char (10) NOT NULL,
+	senha_user char (10) NOT NULL,	-- implementar criptografia depois
+	email_user char (150) NOT NULL UNIQUE,
+	CPF_user char (12) NOT NULL UNIQUE,
 	PRIMARY KEY (id_user)
 	);
 
-CREATE TABLE cadastro_eletro ( -- cadastro dos eletrônicos
+CREATE TABLE cadastro_eletro ( -- cadastro dos eletrônicos 
+-- sugestao: colocar variavel para quantidade no sistema (para pessoas que tem o mesmo produto e facilitar busca para usuario)
 	codigo_eletro char (50) NOT NULL,
 	id_user int NOT NULL,
 	seletor bit NOT NULL, -- SE 0 É PARA VENDA SE 1 É PARA EMPRÉSTIMO
@@ -13,7 +16,7 @@ CREATE TABLE cadastro_eletro ( -- cadastro dos eletrônicos
 	categoria smallint NOT NULL, -- SE NÃO ESTIVER NA CATEGORIA, TEM A OPÇÃO OUTROS
 	grupo smallint NOT NULL,
 	fabricante char (30),
-	preço double NOT NULL,
+	preco double NOT NULL,
 	valor char (10), -- 1K ohm, 100uF...
 	peso double,
 	tombamento char (15),
