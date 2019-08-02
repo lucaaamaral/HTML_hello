@@ -19,8 +19,8 @@
 	<hr>
 	<br><br>
 	
-	<form id="pendencia" action="script_php/cad_pendencia.php" method="post">
-		<p id="numero" name='numero' hidden>0</p>
+	<form id="pendencia" action="script_php/cad_pendencia.php" method="post" onsubmit="return envia()">
+		<input type="text" id="numero" name='numero' value=0 hidden>
 	     <table id="tab" border="1" cellspacing="3" cellpadding="3">		
 	         <tr>
 	         	<th>Seletor</th>
@@ -46,38 +46,11 @@
 	
 	
 	<a href="index.html"><button>Voltar in</button></a>
-	<button onclick="enviar_bd()">Enviar</button>
-	
-	<p>Deverao ser feitas algumas modificacoes para enviar as informacoes por POST
-	<br>
-	formato: "numero"_"valor0a12", "numero" começa em 1</p>
+	<button onclick="numero()">Enviar</button>
+	<p>
+	Colocar funcao javascript para apagar anteriores e php para pegar todos existentes
+	</p>
 
-	<script type="text/javascript" src = "script/pendencias.js"></script>
-	
-<!--B>	 comentario	
-/*
-
-cadastro_eletro:
-	codigo_eletro 	[interno = gerar]
-	id_user int 	[interno = atribuir]
-	seletor bit 	[EXPLICITO]
-	descricao 		[EXPLICITO]
-	categoria 		[EXPLICITO]
-	grupo 			[EXPLICITO]
-	fabricante 		[EXPLICITO]
-	preço 			[EXPLICITO]
-	valor 			[EXPLICITO]
-	peso 				[EXPLICITO]
-	tombamento 		[EXPLICITO]
-	estado_eletro 	[EXPLICITO]
-	serie 			[EXPLICITO]
-	ref_modelo 		[EXPLICITO]
-	origem 			[EXPLICITO]
-	data_entrada 	[interno]
-	data_aquiscao 	[EXPLICITO]
-	obs 				[EXPLICITO]
-*/		
-		
-</B-->	
+	<script type="text/javascript" src = "script/pendencias.js"></script>	
 </body>
 </html>
