@@ -11,7 +11,7 @@ CREATE TABLE cadastro_eletro ( -- cadastro dos eletrônicos
 -- sugestao: colocar variavel para quantidade no sistema (para pessoas que tem o mesmo produto e facilitar busca para usuario)
 	codigo_eletro char (50) NOT NULL,
 	id_user int NOT NULL,
-	seletor bit NOT NULL, -- SE 0 É PARA VENDA SE 1 É PARA EMPRÉSTIMO
+	seletor bit NOT NULL, -- SE 0 É PARA VENDA SE 1 É PARA EMPRÉSTIMO // não estã mandando ou representando direito
 	descricao char (30), -- APENAS QUANDO O ELETRO NÃO ESTÁ CADASTRADO NAS CATEGORIAS
 	categoria smallint NOT NULL, -- SE NÃO ESTIVER NA CATEGORIA, TEM A OPÇÃO OUTROS
 	grupo smallint NOT NULL,

@@ -1,20 +1,9 @@
 <?php
-/*
-
-cadastro_eletro:
-	codigo_eletro 	[interno = gerar]
-	id_user int 	[interno = atribuir]
-*/
-
-//AJUSTAR QUANDO BANCO ESTIVER PRONTO
 
 $server = "localhost";
 $user = "tree";
 $passwd = "treeUFPB";
 $dbname = "tree";
-
-	
-  
 
 		$j = $_POST["numero"];
 		//rolar de 0 ate "numero"
@@ -44,7 +33,7 @@ $dbname = "tree";
 				//modificar codigo gerado
 				$id = '2019'.$cat.$grupo.$desc;
 				$id_user = 34;
-			
+				echo $seletor;
 	
 				$sql = "INSERT INTO cadastro_eletro (codigo_eletro, id_user, seletor, descricao, categoria, grupo, fabricante, preço, valor, peso, tombamento, estado_eletro, serie, ref_modelo, origem, data_aquiscao, obs) VALUES ('$id', '$id_user', '$seletor', '$desc', '$cat', '$grupo', '$fabricante', '$preco', '$valor', '$peso', '$tombamento', '$estado_eletro', '$serie', '$ref_modelo', '$origem', '$data_aquisicao', '$obs')";
 	

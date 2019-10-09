@@ -23,7 +23,7 @@ Eletronico:
 	origem 
 	data_aq	-- data de compra
 	data_en	-- data de cadastro
-	~data_op -- data da ultima operação
+	data_op -- data da ultima operação
 	obs
 	
 Venda:

@@ -11,28 +11,25 @@
 
 <body>
 	<h1>app TREE</h1>
-	<h4>Buscar</h4>
+	<h4 id="ver">Buscar f</h4>
 	<hr>
-
-	<form id="busca">
-		<fieldset>
-			<legend>Busca:</legend>
-			<input type="text" class="form" id="buscar_text">
-			<select>
-				<option value="codigo">codigo</option>
-				<option value="descricao">descrição</option>
-				<option value="data">data</option>
-				<option value="todos">todos</option>
+	
+	<legend>Busca:</legend>
+	<form id="busca" action="script_php/busca.php" method="post" onsubmit="return busca()">
+			<input type="text" class="form" name="buscar" id="buscar">
+			<select name="metodo" id="metodo">
+				<option value="0">codigo</option>
+				<option value="1">descrição</option>
+				<option value="2">data</option>
+				<option value="3">todos</option>
 			</select>
-			<input type="button" value="Buscar" onclick="busca()">
-
-		</fieldset>
+			<input type="submit" value="Buscar">
 	</form>
 	<br>
 	<br>
 	<a href="index.html"><button>Voltar</button></a>
 
-	<script type = "text/javascript" src = "buscar.js"> </script>
+	<script type = "text/javascript" src = "script/buscar.js"> </script>
 </body>
 
 </html>

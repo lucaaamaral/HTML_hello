@@ -1,5 +1,8 @@
 function busca() 	
 {
-  window.location.href ="../resultado_busca/resultado_busca.html";
+	document.getElementById("ver").innerHTML = "deu certo";
+	alert("busca");
+  //window.location.href ="resultado_busca.html";
+  return true;
 }
 	

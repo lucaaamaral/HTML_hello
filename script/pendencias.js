@@ -74,6 +74,7 @@ function update()
 		     var inp14 = document.createElement("input");
 		     var inp15 = document.createElement("input");
 		     
+		     
 		     //Atributo 'name'
 		     inp1.name=i+"_"+0;
 		     inp2.name=i+"_"+1;
@@ -174,7 +175,7 @@ function enviar_bd()
 }
 function envia()
 {
-	alert("Fazer envio de todos os arquivos de uma vez (um a um já é funcional)");
+	alert("Enviar todos os itens de uma vez. (fazer automatico quando online!!)");
 	window.localStorage.submitted=1;
 		
 	return true;
